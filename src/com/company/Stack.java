@@ -5,7 +5,7 @@ package com.company;
  */
 public class Stack {
 
-        private final int maxSize = 100;//Размер массива
+        private final int maxSize = 1000;//Размер массива
         private final int[] stackArray;
         private int top;//Вершина стека
 
@@ -16,7 +16,9 @@ public class Stack {
         }
     public void push(int node)
     {
-        stackArray[++top] = node;//Увеличение top, вставка элемента
+        top++;
+        stackArray[top] = node;//Увеличение top, вставка элемента
+
     }
     public int pop()
     {

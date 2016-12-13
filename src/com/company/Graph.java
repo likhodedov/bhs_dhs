@@ -5,7 +5,7 @@ package com.company;
  */
 public class Graph {
     //максимальное количество вершин в графе
-    static final int VERTEX_MAX = 100000;
+    static final int VERTEX_MAX = 1000;
     //массив для хранения вершин
     private Vertex[] vertexList;
     //текущее количество вершин в графе
