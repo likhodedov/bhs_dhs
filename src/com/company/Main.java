@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 	Graph mygraph = new Graph();
-        for (int i=0;i<100;i++){
+        for (int i=0;i<Graph.getVertex_max();i++){
             String name ="Vershina_"+i;
             mygraph.addVertex(name);
         }
