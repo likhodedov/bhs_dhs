@@ -5,14 +5,14 @@ package com.company;
  */
 public class Graph {
     //максимальное количество вершин в графе
-    private final int VERTEX_MAX = 100;
+    private final int VERTEX_MAX = 10000;
     //массив для хранения вершин
     private Vertex[] vertexList;
     //текущее количество вершин в графе
     private int vertexCount;
     //матрица смежности
     private int[][] matrix;
-        JQueue queue = new JQueue(100);
+        JQueue queue = new JQueue(1000);
     Stack stack= new Stack();
 
     public Graph()
@@ -27,7 +27,11 @@ public class Graph {
     }
     public void addVertex(String label)
     {
-        vertexList[vertexCount++] = new Vertex(label);
+try{
+        vertexList[vertexCount] = new Vertex(label);
+vertexCount++;}
+        catch (ArrayIndexOutOfBoundsException e){
+            }
     }
     public void addEdge(int begin, int end)
     {

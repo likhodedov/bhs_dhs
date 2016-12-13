@@ -8,10 +8,16 @@ public class Main {
             String name ="Vershina_"+i;
             mygraph.addVertex(name);
         }
+        long start= System.nanoTime();
 mygraph.bfs(5);
-System.out.println("-----------");
-mygraph.dfs(7);
+        long finish=System.nanoTime();
 
+System.out.println("-----------");
+        long start2= System.nanoTime();
+mygraph.dfs(7);
+        long finish2=System.nanoTime();
+        System.out.println(finish-start);
+        System.out.println(finish2-start2);
     }
 
 
